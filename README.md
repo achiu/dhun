@@ -112,6 +112,13 @@ Skipping to previous file in history.
 You can use a numeric argument to specify the number of tracks to skip ahead,
 like `dhun prev 2`.
 
+Shuffling the queue
+
+    $ dhun shuffle
+    Queue is shuffled
+    /Users/deepak/Dropbox/shared/music/3 idiots/35634_Give Me Some Sunshine.mp3
+    /Users/deepak/Dropbox/shared/music/Aao Wish Karen/35612_Kuch Aisa.mp3
+    /Users/deepak/Dropbox/shared/music/Coke Studio/Jo-Meray.mp3
 
 ### Other commands
 
