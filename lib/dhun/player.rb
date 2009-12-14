@@ -23,7 +23,7 @@ module Dhun
       @queue.clear
     end
 
-    
+
     def play_files(files)
       if files.empty?
         logger.log "Empty Queue"
@@ -44,7 +44,7 @@ module Dhun
       return unless self.status == :stopped
       @status = :playing
       @player_thread = Thread.new do
-        while  @status == :playing and !queue.empty?          
+        while  @status == :playing and !queue.empty?
           @current = @queue.shift
           logger.log "Playing #{@current}"
           DhunExt.play_file @current
@@ -78,12 +78,28 @@ module Dhun
       logger.debug "Stopped"
     end
 
-    def next
+    def next(skip_length = 1)
       logger.debug "Switching to next"
-      stop # stops current track
-      next_track = @queue.first
-      play # start playing with the next track
+      unless @queue.size < skip_length
+        stop # stops current track
+        @queue.shift skip_length-1 # Remove skip_length-1 tracks
+        next_track = @queue.first
+        play # start playing with the next track
+      end
       return next_track
+    end
+
+    def prev(skip_length = 1)
+      logger.debug "Switching to prev"
+      unless @history.size < skip_length
+        stop # stops current track
+        tracks = @history.shift skip_length + 1
+        logger.debug tracks
+        tracks.each { |t| @queue.unshift t }
+        prev_track = @queue.first
+        play # start playing with the next track
+      end
+      return prev_track
     end
 
     def shuffle
