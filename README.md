@@ -94,6 +94,18 @@ Skipping to next file
     $ dhun next
     Dhun is playing /Users/deepak/Music/iTunes/iTunes Media/Music/Edward Sharpe & The Magnetic Zeros/Here Comes/03 Carries On.mp3
 
+You can use a numeric argument to specify the number of tracks to skip ahead,
+like `dhun next 2`.
+
+Skipping to previous file in history.
+
+    $ dhun prev Dhun is playing
+    /Users/deepak/Music/iTunes/iTunes Media/Music/Edward Sharpe & The Magnetic Zeros/Here Comes/02 Janglin.mp3
+
+You can use a numeric argument to specify the number of tracks to skip ahead,
+like `dhun prev 2`.
+
+
 Status
 
     $ dhun status
