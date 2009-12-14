@@ -92,8 +92,12 @@ module Dhun
     def prev(skip_length = 1)
       logger.debug "Switching to prev"
       unless @history.size < skip_length
-        stop # stops current track
-        tracks = @history.shift skip_length + 1
+        unless @status == :stopped
+          stop
+          # history has increased by one
+          skip_length = skip_length + 1
+        end
+        tracks = @history.shift skip_length
         logger.debug tracks
         tracks.each { |t| @queue.unshift t }
         prev_track = @queue.first

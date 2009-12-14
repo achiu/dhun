@@ -106,8 +106,8 @@ like `dhun next 2`.
 
 Skipping to previous file in history.
 
-    $ dhun prev Dhun is playing
-    /Users/deepak/Music/iTunes/iTunes Media/Music/Edward Sharpe & The Magnetic Zeros/Here Comes/02 Janglin.mp3
+    $ dhun prev 
+    Dhun is playing /Users/deepak/Music/iTunes/iTunes Media/Music/Edward Sharpe & The Magnetic Zeros/Here Comes/02 Janglin.mp3
 
 You can use a numeric argument to specify the number of tracks to skip ahead,
 like `dhun prev 2`.
@@ -152,10 +152,11 @@ This will exit the process.
 
 ## Coming Soon
 
-These features are planned in the next few releases
+There are some features planned in the short run. Please file an issue with a
+feature request, if you have one.
 
-* Playing previous song, using something like `dhun prev`
-* Skipping ahead by more than one file, like `dhun next 2` or `dhun prev 2`
+* Saving/Loading playlists
+* Growl Notifications using `growlnotify`
 
 And someday..
 
