@@ -76,6 +76,13 @@ your queue. To append files to queue, use `enqueue`.
     /Users/deepak/Music/iTunes/iTunes Media/Music/Edward Sharpe & The Magnetic Zeros/Here Comes/01 40 Day Dream.mp3
     /Users/deepak/Music/iTunes/iTunes Media/Music/Edward Sharpe & The Magnetic Zeros/Here Comes/02 Janglin.mp3
     /Users/deepak/Music/iTunes/iTunes Media/Music/Edward Sharpe & The Magnetic Zeros/Here Comes/03 Carries On.mp3
+    
+Enqueuing more files.
+
+    $ dhun enqueue chup
+    1 files queued for playing.
+    /Users/deepak/Dropbox/shared/music/Coke Studio/Chup.mp3
+    
 
 ### Controlling Playback
 
@@ -106,6 +113,8 @@ You can use a numeric argument to specify the number of tracks to skip ahead,
 like `dhun prev 2`.
 
 
+### Other commands
+
 Status
 
     $ dhun status
@@ -120,11 +129,13 @@ Status
     /Users/deepak/Dropbox/shared/music/Here Comes/01 - 40 Day Dream.mp3
     /Users/deepak/Dropbox/shared/music/Here Comes/03 - Carries On.mp3
 
-Enqueuing more files.
+History
 
-    $ dhun enqueue chup
-    1 files queued for playing.
-    /Users/deepak/Dropbox/shared/music/Coke Studio/Chup.mp3
+    $ dhun history
+    3 files in history
+    /Users/deepak/Dropbox/shared/music/Coke Studio/Bari-Barsi.mp3
+    /Users/deepak/Dropbox/shared/music/Coke Studio/Aankhon-Kay-Sagar.mp3
+    /Users/deepak/Dropbox/shared/music/Coke Studio/Paimona.mp3
 
 ### Stopping Dhun
 
