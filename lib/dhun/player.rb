@@ -51,7 +51,6 @@ module Dhun
           @history.unshift @current
         end
         @status = :stopped
-        logger.log "Finished playing #{@current}"
         @current = nil
       end
     end
